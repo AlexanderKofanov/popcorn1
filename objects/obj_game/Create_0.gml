@@ -13,6 +13,7 @@ table_bottom = room_height - table_margin_bottom;
 kernels = [];
 popcorns = [];
 score = 0;
+color = #FFB733;
 
 // Свечка в углу стола
 candle_half_w = sprite_get_width(spr_candle) * 0.5;
