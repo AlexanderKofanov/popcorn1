@@ -127,12 +127,12 @@ if mouse_check_button_pressed(mb_left)
 			kernels = [];
 			popcorns = [];
 			items = [];
-			for (var pi = 0; pi < array_length(cfg.popcorn_types); pi++)
+			for (var pop_type_i = 0; pop_type_i < array_length(cfg.popcorn_types); pop_type_i++)
 			{
-				var ptt = cfg.popcorn_types[pi];
-				ptt.unlocked = (pi == 0);
+				var ptt = cfg.popcorn_types[pop_type_i];
+				ptt.unlocked = (pop_type_i == 0);
 				ptt.spawn_rate_lvl = 0;
-				cfg.popcorn_types[pi] = ptt;
+				cfg.popcorn_types[pop_type_i] = ptt;
 			}
 		}
 	}
@@ -240,14 +240,14 @@ for (var h = array_length(hands) - 1; h >= 0; h--)
 	hand.y = lerp(hand.sy, hand.ty, tt);
 	if (!hand.done && tt >= 0.55)
 	{
-		for (var pi = array_length(popcorns) - 1; pi >= 0; pi--)
+		for (var pop_i = array_length(popcorns) - 1; pop_i >= 0; pop_i--)
 		{
-			var pk = popcorns[pi];
+			var pk = popcorns[pop_i];
 			if (!pk.collected && point_distance(hand.tx, hand.ty, pk.x, pk.y) < 40)
 			{
 				pk.collected = true;
 				pk.collect_timer = 2;
-				popcorns[pi] = pk;
+				popcorns[pop_i] = pk;
 				money += ceil(pk.value * cfg.prestige.hand_profit_mult * hand_profit_mult);
 				part_particles_create(ps_table, pk.x, pk.y - 4, pt_money, 8);
 				hand.done = true;

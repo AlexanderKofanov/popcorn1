@@ -46,12 +46,12 @@ draw_text(col_w * 0 + 20, 24, "TEMP +  ($" + string(temp_cost) + ")");
 var item_rows = ["matches", "candle", "lighter"];
 for (var i = 0; i < 3; i++)
 {
-	var id = item_rows[i];
+	var item_key = item_rows[i];
 	var can = false;
 	var cost = 0;
 	for (var k = 0; k < array_length(cfg.items); k++)
 	{
-		if (cfg.items[k].id == id)
+		if (cfg.items[k].id == item_key)
 		{
 			can = cfg.items[k].unlocked;
 			cost = cfg.items[k].cost;
@@ -60,7 +60,7 @@ for (var i = 0; i < 3; i++)
 	draw_set_color(can ? make_color_rgb(93, 97, 150) : make_color_rgb(50, 50, 60));
 	draw_roundrect(col_w * 1 + 14, 18 + i * 36, col_w * 1 + btn_w + 14, 18 + i * 36 + btn_h, false);
 	draw_set_color(c_white);
-	draw_text(col_w * 1 + 20, 24 + i * 36, id + "  $" + string(cost));
+	draw_text(col_w * 1 + 20, 24 + i * 36, item_key + "  $" + string(cost));
 }
 
 // Попкорн типы
