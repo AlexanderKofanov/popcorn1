@@ -15,11 +15,11 @@ popcorns = [];
 score = 0;
 
 // Свечка в углу стола
-candle_half_w = sprite_get_width(spr_candle) * 0.24;
-candle_half_h = sprite_get_height(spr_candle) * 0.24;
-candle_flame_radius = 72;
-candle_x = table_left + 110;
-candle_y = table_top + 110;
+candle_half_w = sprite_get_width(spr_candle) * 0.5;
+candle_half_h = sprite_get_height(spr_candle) * 0.5;
+candle_flame_radius = 78;
+candle_x = table_left + candle_half_w + 22;
+candle_y = table_top + candle_half_h + 22;
 dragging_candle = false;
 drag_dx = 0;
 drag_dy = 0;
@@ -44,10 +44,10 @@ part_type_shape(pt_pop_burst, pt_shape_cloud);
 part_type_size(pt_pop_burst, 0.2, 0.6, 0, 0);
 part_type_alpha2(pt_pop_burst, 0.9, 0);
 part_type_color3(pt_pop_burst, c_white, make_color_rgb(255, 236, 176), make_color_rgb(255, 172, 106));
-part_type_speed(pt_pop_burst, 2.2, 4.6, 0, 0);
+part_type_speed(pt_pop_burst, 2.2, 4.8, 0, 0);
 part_type_direction(pt_pop_burst, 0, 360, 0, 0);
 part_type_life(pt_pop_burst, 18, 34);
-part_type_gravity(pt_pop_burst, 0.05, 270);
+part_type_gravity(pt_pop_burst, 0.07, 270);
 
 pt_money = part_type_create();
 part_type_shape(pt_money, pt_shape_pixel);
@@ -58,6 +58,16 @@ part_type_speed(pt_money, 1.3, 3.0, 0, 0);
 part_type_direction(pt_money, 210, 330, 0, 0);
 part_type_life(pt_money, 14, 26);
 part_type_gravity(pt_money, 0.06, 270);
+
+pt_flame = part_type_create();
+part_type_shape(pt_flame, pt_shape_circle);
+part_type_size(pt_flame, 0.08, 0.22, -0.003, 0);
+part_type_alpha2(pt_flame, 0.8, 0);
+part_type_color3(pt_flame, make_color_rgb(255, 200, 90), make_color_rgb(255, 130, 55), make_color_rgb(255, 240, 180));
+part_type_speed(pt_flame, 0.1, 0.45, 0, 0);
+part_type_direction(pt_flame, 70, 110, 0, 0);
+part_type_life(pt_flame, 10, 18);
+part_type_gravity(pt_flame, 0.03, 90);
 
 var xx = camera_get_view_x(view_camera);
 var yy = camera_get_view_y(view_camera);
