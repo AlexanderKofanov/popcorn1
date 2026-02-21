@@ -62,10 +62,10 @@ for (var d = 0; d < array_length(draw_items); d++)
 			var flame_x = candle_x;
 			var flame_y = candle_y - candle_half_h * 0.75;
 			var flicker = 1 + sin(current_time * 0.02) * 0.08;
-			draw_set_blend_mode(bm_add);
+			gpu_set_blendmode(bm_add);
 			draw_sprite_ext(spr_shine, 0, flame_x, flame_y, 0.12 * flicker, 0.12 * flicker, 0, make_color_rgb(255, 169, 80), 0.65);
 			draw_sprite_ext(spr_shine, 0, flame_x, flame_y, 0.07 * flicker, 0.07 * flicker, 0, make_color_rgb(255, 238, 170), 0.9);
-			draw_set_blend_mode(bm_normal);
+			gpu_set_blendmode(bm_normal);
 		break;
 	}
 }
