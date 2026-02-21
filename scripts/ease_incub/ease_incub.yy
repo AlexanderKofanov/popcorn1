@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"ease_incub",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"ease_incub",
+  "parent":{
+    "name":"Ease",
+    "path":"folders/Scripts/Ease.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

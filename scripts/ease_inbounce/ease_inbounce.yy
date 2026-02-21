@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"ease_inbounce",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"ease_inbounce",
+  "parent":{
+    "name":"Ease",
+    "path":"folders/Scripts/Ease.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

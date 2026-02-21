@@ -1,0 +1,6 @@
+part_system_destroy(conf)
+part_system_destroy(stars)
+part_type_destroy(conf_particle)
+part_type_destroy(conf_particle1)
+part_type_destroy(star_particle)
+part_type_destroy(some_particle)

@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"ease_outbounce",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"ease_outbounce",
+  "parent":{
+    "name":"Ease",
+    "path":"folders/Scripts/Ease.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

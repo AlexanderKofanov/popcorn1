@@ -1,0 +1,15 @@
+enum STATE
+{
+	DRAGGABLE,
+	CONNECTED,
+	DRAGGING,
+	PLACED,
+	GONE
+}
+
+enum HEX_STATE
+{
+	FREE,
+	TAKEN,
+	HOVER
+}
