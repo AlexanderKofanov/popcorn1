@@ -7,3 +7,4 @@ part_type_destroy(pt_seed_hit);
 part_type_destroy(pt_pop_burst);
 part_type_destroy(pt_money);
 part_type_destroy(pt_flame);
+part_type_destroy(pt_special);
